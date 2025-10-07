@@ -11,7 +11,17 @@ const identity = {
   hobbies: ["music production", "graphic design", "table tennis"],
 };
 
-const skills = ["HTML5", "CSS3", "Tailwind v3/v4", "JavaScript", "Typescript", "React", "Astro", "Figma", "Writing Docs"];
+const skills = [
+  "HTML5",
+  "CSS3",
+  "Tailwind v3/v4",
+  "JavaScript",
+  "Typescript",
+  "React",
+  "Astro",
+  "Figma",
+  "Writing Docs",
+];
 const happy = true;
 const finished = false;
 const goal = 3;
@@ -62,8 +72,7 @@ const textCase = "uppercase";
         identity.hobbies.length >= 3 && (
           <li>
             Three of my hobbies are: {identity.hobbies[0]} ,
-            {identity.hobbies[1]} and {" "}
-            {identity.hobbies[2]}
+            {identity.hobbies[1]} and {identity.hobbies[2]}
           </li>
         )
       }
@@ -86,5 +95,9 @@ const textCase = "uppercase";
     }
 
     <Footer />
+
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
