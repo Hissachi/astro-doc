@@ -1,16 +1,17 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import "../styles/global.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const pageTitle = "About Me";
 const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
+  firstName: "Lucas",
+  country: "Brazil",
+  occupation: "Frontend Developer and UX/UI Designer",
+  hobbies: ["music production", "graphic design", "table tennis"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["HTML5", "CSS3", "Tailwind v3/v4", "JavaScript", "Typescript", "React", "Astro", "Figma", "Writing Docs"];
 const happy = true;
 const finished = false;
 const goal = 3;
@@ -25,7 +26,7 @@ const textCase = "uppercase";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <style define:vars={{skillColor, fontWeight, textCase}}>
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
       h1 {
         color: purple;
         font-size: 4rem;
@@ -58,10 +59,11 @@ const textCase = "uppercase";
         I live in {identity.country} and I work as a {identity.occupation}.
       </li>
       {
-        identity.hobbies.length >= 2 && (
+        identity.hobbies.length >= 3 && (
           <li>
-            Two of my hobbies are: {identity.hobbies[0]} and{" "}
-            {identity.hobbies[1]}
+            Two of my hobbies are: {identity.hobbies[0]} ,
+            {identity.hobbies[1]} and {" "}
+            {identity.hobbies[2]}
           </li>
         )
       }
@@ -82,5 +84,7 @@ const textCase = "uppercase";
         <p>My goal is not 3 days.</p>
       )
     }
+
+    <Footer />
   </body>
 </html>
